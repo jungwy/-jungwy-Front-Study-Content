@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .box {
+            font-size: 8rem;
+            font-weight: 600;
+            background-color: orangered;
+            color: white;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 사람 - 성, 이름, 나이, 키
+
+        var person1 = {
+            firstname : 'sally',
+            lastname : 'yoon',
+            age : 23,
+            height: 170,
+            fullname: function(){
+                return this.firstname + this.lastname;
+            }
+        }
+        var person2 = {
+            firstname : '길동',
+            lastname : '홍',
+            age : 50,
+            height : 190,
+            fullname: function(){
+                return this.firstname + this.lastname;
+            }
+        }
+
+        console.log(person1);
+        console.log('person1의 이름은 '+person1.firstname +' '+ person1.lastname+'입니다');
+        console.log('person1의 이름은 '+person1.fullname()+'입니다');
+        console.log(person2);
+        console.log('person2의 이름은 '+person2.firstname +' '+ person2.lastname+'입니다');
+        console.log('person2의 이름은 '+person2.fullname()+'입니다');
+
+
+        function Person(fname,lname,age,h){
+            this.firstname = fname;
+            this.lastname = lname;
+            this.age = age;
+            this.height = h;
+        }
+
+        console.log( new Person() );
+
+        var person3 = new Person('지우','이',60,155);
+        var person4 = new Person('흥민','손',30,185);
+
+        console.log(person3);
+        console.log(person4);
+
+
+
+
+        var d1 = new Date();
+        console.log( new Date() );
+
+
+        // var aa = 1;
+        console.log(1);
+
+        console.log('올해는 ' + d1.getFullYear() + '년 입니다');
+        var monthlist = ['일월','이월']
+        // console.log( '달' + (d1.getMonth()+1) );
+        console.log( '달' + monthlist[ d1.getMonth() ] );
+        console.log( '날짜' + d1.getDate() );
+
+        var daylist = ['SUN','월요일','화요일','수요일','목요일','FRI','SAT'];
+        console.log( '요일' + daylist[ d1.getDay() ] );
+
+        console.log( d1.getHours() );
+        console.log( d1.getMinutes() );
+        console.log( d1.getSeconds() );
+        console.log( d1.getTime() );
+
+        
+    </script>
+
+    <div id="box1" class="box"></div>
+
+    <div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+    </div>
+
+    <button id="btn">시간보기</button>
+    
+
+    <script>
+        var d2 = new Date();
+        // document.querySelector('#box1').innerHTML = (d2.getMonth()+1) + '월 ' + d2.getDate() + '일';
+
+        // box2.innerHTML = d2.getHours()+'시';
+        // box3.innerHTML = d2.getMinutes()+'분';
+        // box4.innerHTML = d2.getSeconds()+'초';
+
+
+        btn.onclick = function(){
+
+            var d2 = new Date();
+
+            box1.innerHTML = (d2.getMonth()+1) + '월 ' + d2.getDate() + '일';
+            box2.innerHTML = d2.getHours()+'시';
+            box3.innerHTML = d2.getMinutes()+'분';
+            box4.innerHTML = d2.getSeconds()+'초';
+
+        };
+
+
+
+        // setInterval( function(){
+
+        //     var d2 = new Date();
+
+        //     box1.innerHTML = (d2.getMonth()+1) + '월 ' + d2.getDate() + '일';
+        //     box2.innerHTML = d2.getHours()+'시';
+        //     box3.innerHTML = d2.getMinutes()+'분';
+        //     box4.innerHTML = d2.getSeconds()+'초';
+
+        // } ,1000);
+
+
+
+    </script>
+
+    
+    <script>
+
+        var d3 = new Date();
+
+        var d3_delivery = new Date( d3.setDate( d3.getDate()+30 ) );
+        console.log( d3_delivery );
+
+    </script>
+</body>
+</html>

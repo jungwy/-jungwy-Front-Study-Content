@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumb {
+            height: 150px;
+        }
+        .big {
+            position: fixed;
+            left: 20%;
+            top: 0;
+            width: 60%;
+            display: none;
+        }
+        /* .imgtxt {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 10rem;
+            color: red;
+            display: none;
+        } */
+
+
+        .txt {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 100px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    <img src="./img/a.jpg" alt="간식" class="thumb">
+    <img src="./img/b.jpg" alt="식물" class="thumb">
+    <img src="./img/c.jpg" alt="컴퓨터" class="thumb">
+
+    <!-- 떠야할 이미지를 미리 만들었다 -->
+    <img src="" alt="큰 이미지" class="big">
+    <p class="txt">간식</p>
+    <script>
+        $('.thumb').css('border','3px solid red');
+        $('.thumb').click(function(){
+            $('.big').show();
+            var imgsrc = $(this).attr('src');
+            $('.big').attr('src',imgsrc);
+
+            $('.txt').show();
+            $('.txt').html( $(this).attr('alt') );
+        });
+
+        $('.big').click(function(){
+            $(this).hide();
+            $('.txt').hide();
+        });
+    </script>
+
+    <hr>
+
+    <h1>Object</h1>
+
+    <script>
+        var box = 'banana';
+            box = 123;
+            box = ['apple','banana'];
+
+            box = { 
+                firstname:'sally', 
+                lastname:'yoon', 
+                age:50, 
+                hair:'long',
+                fullname: function(){
+                    return this.firstname + this.lastname;
+                }
+            };
+        
+        console.log( box.fullname() );
+
+        Math.random();
+        Math.floor();
+
+        console.log(box);
+
+        var car1 = { color: 'white', cc: 2000, made: 'korea' };
+        var car2 = { color: 'red', cc: 1500, made: 'japan' };
+        var car3 = { color: 'blue', cc: 7000, made: 'china' };
+
+        console.log('첫번째 자동차의 색깔은 '+ car1.color +'입니다');
+        console.log('첫번째 자동차의 배기량은 '+ car1.cc +'입니다');
+        console.log('첫번째 자동차의 제조국은 '+ car1['made'] +'입니다');
+
+        
+    </script>
+
+
+
+
+
+
+</body>
+</html>

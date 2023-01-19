@@ -1,0 +1,36 @@
+.img1 {
+    width: 500px;
+    height: 500px;
+}
+
+
+.box1 {
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+    background-color: blue;
+    background-image: url('../img/coke.jpg');
+    /* background-size: cover; */
+    background-position: center;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.box2 {
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+    background-image: url('../img/forest.jpg');
+    /* background-size: cover; */
+    background-position: right top;
+    color: #fff;
+    font-size: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.box1:hover,
+.box2:hover {
+    width: 400px;
+    height: 400px;
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+}
+header>ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header li {
+    margin-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+header li:hover {
+    text-decoration: underline;
+}
+header li i {
+    font-size: 27px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 7px;
+}
+header li i:hover {
+    background-color: #eee;
+}
+
+
+.appbtn {
+    position: relative;
+}
+.info {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+.appbtn:hover .info {
+    display: block;
+}
+
+
+
+
+section {
+    margin-top: 100px;
+}
+h1 {
+    text-align: center;
+}
+h1 img {
+    width: 272px;
+}
+
+.search {
+    width: 561px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px #ccc;
+    border-radius: 30px;
+    padding: 12px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search img {
+    width: 20px;
+}
+.search input {
+    width: 475px;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+}
+.search input::placeholder {
+    font-size: 15px;
+}
+
+
+
+.custom {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: blue;
+    box-shadow: 0 5px 10px #aaa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.custom:hover {
+    background-color: #fafafa;
+}

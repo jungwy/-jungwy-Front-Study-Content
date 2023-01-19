@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        저는 고양이를 좋아해요. 고양이는 아주 귀엽고 예뻐요. 고양이는 많은 사람들이 사랑합니다.
+    </p>
+    <button id="btn">강아지로 수정</button>
+    <button id="btn2">동물입력하기</button>
+
+    <script>
+        var txt = document.querySelector('p').innerHTML;
+        
+        // console.log(txt2);
+        
+
+        btn.addEventListener('click',function(){
+            var txt2 = txt.replaceAll('고양이','강아지');
+            document.querySelector('p').innerHTML = txt2;
+        });
+
+        btn2.onclick = function(){
+            var animal = prompt('무슨동물을 좋아하세요?');
+            var txt3 = txt.replaceAll('고양이',animal);
+            document.querySelector('p').innerHTML = txt3;
+        }
+
+        var txt4 = 'Hello World!';
+        console.log(txt4);
+
+        txt4 = txt4.toUpperCase();
+        console.log(txt4);
+
+        txt4 = txt4.toLowerCase();
+        console.log(txt4);
+
+
+        var txt5 = 'Nice';
+        var txt6 = 'happy';
+        
+        var txt7 = txt5.concat(txt6);
+        console.log(txt7);
+
+
+    </script>
+
+
+</body>
+</html>

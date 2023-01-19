@@ -1,0 +1,27 @@
+body {
+    background-color: yellow;
+}
+h4 {
+    color: red;
+    text-decoration: line-through;
+
+    /* 까만색 2px정도 되는 점선 테두리 */
+    border: 2px dashed black;
+}
+h3 { 
+    color: cyan; 
+    text-decoration: underline; 
+    text-align: right; 
+    background-color: black; 
+}
+
+h6 {
+    text-align: center;
+}
+span {
+    font-size: 50px;
+}
+
+p {
+    text-decoration: underline;
+}

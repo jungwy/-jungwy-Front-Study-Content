@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .swiper {
+            height: 600px;
+        }
+        .swiper-slide {
+            position: relative;
+            height: 600px;
+            background-color: yellow;
+            font-size: 5rem;
+        }
+        .swiper-slide>div {
+            position: absolute;
+            left: 150px;
+            top: 50px;
+        }
+        .swiper-slide>div h2 {
+            font-size: 3rem;
+            transform: rotate(-90deg);
+            transition: 1s;
+            opacity: 0;
+        }
+        .swiper-slide-active>div h2 {
+            transform: rotate(0);
+            opacity: 1;
+        }
+        .swiper-slide>div h3 {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 1.5s;
+        }
+        .swiper-slide-active>div h3 {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .slide1>div {
+            color: white;
+        }
+        .slide4>div {
+            color: white;
+        }
+        .slide1 {
+            background-image: url('./img/slide1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .slide2 {
+            background-image: url('./img/slide2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .swiper-slide-active img {
+            transform: scale(1.5);
+            transition: 3s;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide1">
+            <!-- <img src="./img/slide1.jpg" alt="슬라이드"> -->
+            <div>
+                <h2>slide1</h2>
+                <h3>Blue Castle</h3>
+            </div>
+          </div>
+          <div class="swiper-slide slide2">
+            <!-- <img src="./img/slide2.jpg" alt="슬라이드"> -->
+            <div>
+                <h2>slide2</h2>
+                <h3>Christmas</h3>
+            </div>
+          </div>
+          <div class="swiper-slide slide3">
+            <img src="./img/slide3.jpg" alt="슬라이드">
+            <div>
+                <h2>slide3</h2>
+                <h3>Coffee</h3>
+            </div>
+          </div>
+          <div class="swiper-slide slide4">
+            <img src="./img/ss2.jpg" alt="슬라이드">
+            <div>
+                <h2>slide4</h2>
+                <h3>Night and Star</h3>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+            // direction: "vertical",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+</html>

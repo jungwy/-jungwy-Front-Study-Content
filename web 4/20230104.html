@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/20230104.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery.js"></script>
+
+
+    <!-- 전체 todolist가 나오는 박스 -->
+    <section>
+        
+        <!-- 입력하는 빨간 박스 start -->
+        <div class="writebox">
+            <h1>오늘의 계획</h1>
+            <div>
+                <input type="text" placeholder="할일을 적어주세요">
+                <button>추가하기</button>
+            </div>
+        </div>
+        <!-- 입력하는 빨간 박스 end -->
+
+        <!-- 할일이 추가되는 공간 start -->
+        <div class="listbox">
+            <ul id="todolist">
+                <li>계란사기</li>
+                <li>운동가기</li>
+                <li>영화보러가기</li>
+                <li class="checked">책 반납하기</li>
+                <li>자기소개서 작성하기</li>
+                <li>엄마한테 전화하기</li>
+            </ul>
+        </div>
+        <!-- 할일이 추가되는 공간 end -->
+
+    </section>
+
+    <script src="./js/20230104.js"></script>
+
+    <hr>
+
+    <script>
+        var atag = document.createElement('a');
+        atag.innerText = '네이버';
+        atag.id = 'happy';
+        atag.className = 'bye';
+        atag.href = 'http://naver.com';
+        console.log(atag);
+
+        $('body').append(atag);
+
+
+        var h = document.querySelector('h1');
+        h.id = 'title';
+        
+    </script>
+
+</body>
+</html>

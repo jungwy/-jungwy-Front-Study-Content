@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
+    width: 750px;
+    border: 1px solid black;
+    background-color: #eee;
+    margin: 60px auto;
+    display: flex;
+    padding: 15px 20px;
+    font-size: 14px;
+}
+.title {
+    width: 80px;
+    font-weight: 600;
+}
+.slide {
+    width: 430px;
+    line-height: 19px;
+    height: 19px;
+    overflow: hidden;
+}
+
+.menu {
+    width: 190px;
+    font-weight: 600;
+}
+.menu ul {
+    display: flex; /*뉴,연,스,경 가로배치*/
+}
+.menu li {
+    margin: 0 4px; /*뉴,연,스,경 서로떼놓기*/
+}
+.menu li:first-child {
+    color: #3565c9; /*뉴스홈만 컬러변경*/
+}
+.menu li:first-child::after {
+    content: '';
+    display: inline-block;
+    width: 5px; /*뉴스홈 다음에 오는 동그라미*/
+    height: 5px;
+    border-radius: 50%;
+    background-color: #aaa; 
+
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-left: 7px;
+}
+
+
+.slide_window {
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+}
+.slide_window ul {
+    width: 1200px;
+    display: flex;
+}
+.slide1, .slide2, .slide3 {
+    width: 400px;
+    height: 100px;
+}
+.slide1 {background-color: pink}
+.slide2 {background-color: yellow}
+.slide3 {background-color: cyan}

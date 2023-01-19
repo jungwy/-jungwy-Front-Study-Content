@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fullpage.css">
+    <link rel="stylesheet" href="./css/20230119.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li data-menuanchor="s1">
+            <a href="#s1">1번</a>
+        </li>
+        <li data-menuanchor="s2">
+            <a href="#s2">2번</a>
+        </li>
+        <li data-menuanchor="s3">
+            <a href="#s3">3번</a>
+        </li>
+        <li data-menuanchor="s4">
+            <a href="#s4">4번</a>
+        </li>
+        <li data-menuanchor="s5">
+            <a href="#s5">5번</a>
+        </li>
+    </ul>
+
+
+    <div id="fullpage">
+        <div class="section section1">
+            <img src="./coffee/logo.png" alt="커피로고">
+            <h1>coffee</h1>
+        </div>
+        <div class="section">
+            <div class="all">
+                <div class="txt">
+                    <h2>With Coffee</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+                <div class="img">
+                    <img src="./coffee/section1.png" alt="첫 이미지">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="all no_reverse">
+                <div class="img">
+                    <img src="./coffee/section2.png" alt="두번째 이미지">
+                </div>
+                <div class="txt">
+                    <h2>Ordering</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="all">
+                <div class="txt">
+                    <h2>Enjoy Tea</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+                <div class="img">
+                    <img src="./coffee/section3.png" alt="세번째 이미지">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="all no_reverse">
+                <div class="img">
+                    <img src="./coffee/section4.png" alt="네번째 이미지">
+                </div>
+                <div class="txt">
+                    <h2>Sweet coffee</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto est facilis error autem libero blanditiis nihil quas nobis non cupiditate, doloribus corporis id sunt rem perferendis labore? Saepe, temporibus aliquid?</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/fullpage.js"></script>
+    <script>
+        var mypage = new fullpage('#fullpage',{
+            sectionsColor: ['brown','orange','beige','orange','beige'],
+            anchors: ['s1','s2','s3','s4','s5'],
+            menu: '#menu',
+        });
+
+
+
+        // var obj = {
+        //     name: 'sally', 
+        //     age: '30',
+
+        // }
+    </script>
+</body>
+</html>
