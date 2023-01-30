@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023.01.26.css">
+    <title>Document</title>
+</head>
+<body>
+    <video autoplay muted loop id="myvideo" >
+        <!-- autoplay muted에 muted를 해야만 재생 가능 -->
+        <source src="./img/1.mp4" type="video/mp4">
+    </video>
+
+    <div class="txt">
+        <h2>2023년 1월 26일</h2>
+        <h1>웹페이지에 동영상 추가하기</h1>
+        <button onclick="play()" id="btn1">play</button>
+        <!-- <button onclick="stop()" id="bin2">stop</button> -->
+        <button onclick="my()" id="btn3">stop</button>
+    </div>
+
+    <script>
+
+
+        function my(){
+            if(myvideo.paused){
+                mavideo.play();
+                btn3.innerHTML = 'stop';
+            }else{
+                myvideo.pause();
+                btn3.innerHTML = 'play';
+            }
+
+        }
+
+        // function play(){
+        //     myvideo.play();
+        //     btn1.style.display = inline-block;
+        //     btn2.style.display = "none";
+        // }
+
+
+        // function stop(){
+        //     myvideo.pause();
+        //     btn1.style.display = online-block;
+        //     btn2.style.display = "none";
+        // }
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

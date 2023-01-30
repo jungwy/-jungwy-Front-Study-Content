@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.search a::after {
+    content: '>';
+    color: red;
+    background-color: yellow;
+    /* width: 100px;
+    height: 100px;
+    display: inline-block; */
+}
+.search a::before {
+    content: 'ㅇ';
+}
+
+
+
+section {
+    width: 700px;
+    margin: 50px auto;
+}
+section h2 {
+    margin-top: 40px;
+}
+section h2::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 5px solid red;
+    margin-right: 5px;
+}
+
+.ex {
+    margin-bottom: 150px;
+}
+
+.ex li {
+    display: inline-block;
+}
+.ex a {
+    color: gray;
+    text-decoration: none;
+}
+
+/* .ex li:last-child a {
+    font-weight: 700;
+} */
+
+.bold {
+    font-weight: 700;
+}
+
+.ex li+li::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #aaa;
+    margin: 0 8px;
+}
+
+
+
+/* .ex1::before {
+    display: none !important;
+} */
+
+
+.box1 {
+    width: 0px;
+    height: 0px;
+    margin: 40px auto 200px;
+    border-top: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid red;
+
+
+    box-sizing: content-box;
+}
+
+.box2 {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: skyblue;
+}
+.box2::after {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid skyblue;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+}
+.box3>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 250px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    margin: 30px;
+    font-family: 'Tenada';
+    transition: 2s;
+    opacity: 0.5;
+}
+.box3>div:hover {
+    transform: translateY(-50px);
+    opacity: 1;
+}
+.red_message {
+    background-color: #f21731;
+}
+.red_message::after {
+    position: absolute;
+    top: 250px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid #f21731;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    display: inline-block;
+    box-sizing: content-box;
+}
+.green_message {
+    background-color: #12b55b;
+}
+.green_message::after {
+    position: absolute;
+    top: 250px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid #12b55b;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    display: inline-block;
+    box-sizing: content-box;
+}

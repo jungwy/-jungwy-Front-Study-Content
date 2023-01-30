@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/home st.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="../index.html">HOME</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <div class="graybox">
+        <h3> 5만원 이상 무료배송</h3>
+        <img src="./img/kat-med-UrxnKcg-N7w-unsplash.jpg" alt="">
+        <div class="info">
+            <h2>바구니</h2>
+            <div class="price">13000</div>
+        </div>
+        <div class="numbox">
+            <button id="down">
+                <i class="xi-angle-down"></i>
+            </button>
+            <span id="num">1</span>
+            <button id="up">
+                <i class="xi-angle-up"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="bottombox">
+        <p>상품금액 <span id="price">13000</span>원</p>
+        <p>+</p>
+        <p>배송비 <span id="price2">3000</span>원</p>
+    </div>
+
+
+    <div class="bottombox2">
+        <p style="color: red;font-weight: bold;">배송예정일: <span id="d_year"></span>년 <span id="d_month"></span>월 <span id="d_dat"></span> 일</p>
+        <p>결제하실 금액은 총 <span id="price3">16000</span> 원 입니다</p>
+    </div>
+
+    <script>
+        var todat = new Date;
+        console.log(todat);
+
+        console.log( todat.getFullYear() );
+        console.log( todat.getMonth()+1 );
+        console.log( todat.getDate() );
+
+        var deliveryDay = new Date( todat.setDate( todat.getDate()+3 ));
+        console.log(deliveryDay);
+
+        console.log( deliveryDay.getFullYear() );
+        console.log( deliveryDay.getMonth()+1 );
+        console.log( deliveryDay.getDate() );
+
+        d_year.innerHTML = deliveryDay.getFullYear();
+        d_month.innerHTML = deliveryDay.getMonth()+1;
+        d_dat.innerHTML = deliveryDay.getDate();
+
+
+    </script>
+
+    <script>
+        $('#up').click(function(){
+            var nownum = $('#num').html();
+            nownum++;
+            $('#num').html(nownum);
+            
+            $('#price').html(13000*nownum);
+
+
+            var num2 = 0; //배송비
+
+            if(13000*nownum>50000){
+                $('#price2').html(num2);
+            }else{
+            $('#prixe2').html(num2);
+            }
+
+            $('#price3').html(13000*nownum + num2);
+
+
+        })
+
+
+
+
+        down.onclick = function(){
+            var nownum = num.innerHTML;
+            if(nownum==0){ //nownum==0이 0이면 0개부터 1 면 1개부터 시작
+                alert('0개 이상 주문하셔야 합니다!');
+            }else{
+                nownum--;
+            num.innerHTML = nownum;
+            }
+
+            
+            $('#price').html(13000*nownum);
+
+
+            var num2 = 0; //배송비
+            
+            if(13000*nownum>50000){
+                $('#price2').html(num2);
+            }else if(nownum==0){
+                num2 = 0;
+                $('#price2').html(num2);
+            }
+            else{
+            $('#prixe2').html(num2);
+            }
+
+            $('#price3').html(13000*nownum + num2);
+
+        };
+    </script>
+
+</body>
+</html>

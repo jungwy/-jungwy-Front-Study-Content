@@ -1,0 +1,55 @@
+.t1{
+text-align: center;
+color: blue;
+}
+.abox{
+    display: flex;
+    /* flex-wrap:  wrap; */
+}
+.box1{
+    border: 1px solid green;
+    padding: 10px;
+}
+.box1:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+.box2{
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.box2:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+.box3{
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.box3:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+.box4{
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.box4:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+.box5{
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.box5:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+.box6{
+    border: 1px solid green;
+    padding: 10px;
+    
+}
+.box6:hover{
+    box-shadow: 1px 1px 10px #000;
+}

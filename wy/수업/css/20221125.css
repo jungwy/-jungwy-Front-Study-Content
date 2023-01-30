@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: purple;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Pretendard-Regular';
+}
+
+/* section {
+    width: 800px;
+    height: 600px;
+    background-color: yellow;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.box1 {
+    width: 300px;
+    height: 200px;
+    background-color: green;
+    border: 10px solid black;
+    padding: 20px;
+}
+.box2 {
+    width: 300px;
+    height: 200px;
+    background-color: blue;
+    margin: 20px;
+} */
+
+
+
+
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gnb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.gnb>li {
+    position: relative;
+    padding: 12px 30px;
+}
+.gnb>li:nth-child(1) {
+    padding: 0 30px;
+}
+.gnb>li>a {
+    font-size: 1.3rem;
+    color: #333;
+}
+.gnb>li:nth-child(1) a {
+    display: inline-block;
+    background-image: linear-gradient(to right,#bd1015,#e8212a);
+    border-radius: 5px;
+    color: #fff !important;
+    padding: 8px 15px;
+}
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 280px;
+}
+.submenu>li {
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+.submenu>li:nth-child(1) {
+    border-top: 1px solid #d5181f;
+}
+.gnb>li:hover>a {
+    color: #d5181f;
+}
+.gnb>li:hover .submenu {
+    display: block;
+}
+.submenu li:hover {
+    background-color: #333;
+    color: #fff;
+}
